@@ -16,9 +16,8 @@ void phase_2(const char *input)
 	int *end = &a[6];
 
 	for ( ; begin < end; ++begin) {
-		int tmp = begin[-1];
-		tmp += tmp;
-		if (tmp != begin[0]) {
+		int prev_value = begin[-1] * 2;
+		if (prev_value != begin[0]) {
 			explode_bomb();	
 		}
 	}
