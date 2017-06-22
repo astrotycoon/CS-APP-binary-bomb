@@ -15,12 +15,12 @@ void phase_2(const char *input)
 	int *begin = &a[1];
 	int *end = &a[6];
 
-	for (begin = &a[1], end = &a[6]; begin < end; ++begin) {
+	for ( ; begin < end; ++begin) {
 		int tmp = begin[-1];
 		tmp += tmp;
 		if (tmp != begin[0]) {
 			explode_bomb();	
-		}	
+		}
 	}
 }
 
